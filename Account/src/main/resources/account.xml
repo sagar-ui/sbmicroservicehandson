@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="acc1" class="com.cognizant.account.model.Account">
+		<property name="number" value="00987987973432" />
+		<property name="type" value="savings" />
+		<property name="balance" value="234343" />
+	</bean>
+	<bean id="acc2" class="com.cognizant.account.model.Account">
+		<property name="number" value="00987987973124" />
+		<property name="type" value="current" />
+		<property name="balance" value="450014" />
+	</bean>
+	<bean id="acc3" class="com.cognizant.account.model.Account">
+		<property name="number" value="00987987973566" />
+		<property name="type" value="savings" />
+		<property name="balance" value="215820" />
+	</bean>
+	<bean id="acc4" class="com.cognizant.account.model.Account">
+		<property name="number" value="00987987973931" />
+		<property name="type" value="current" />
+		<property name="balance" value="698720" />
+	</bean>
+	<bean id="acc5" class="com.cognizant.account.model.Account">
+		<property name="number" value="00987987974521" />
+		<property name="type" value="savings" />
+		<property name="balance" value="9652520" />
+	</bean>
+
+	<bean id="accountList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="acc1"></ref>
+				<ref bean="acc2"></ref>
+				<ref bean="acc3"></ref>
+				<ref bean="acc4"></ref>
+				<ref bean="acc5"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

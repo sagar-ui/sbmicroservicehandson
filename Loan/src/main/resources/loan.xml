@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="loan1" class="com.cognizant.loan.model.Loan">
+		<property name="number" value="H00987987972342" />
+		<property name="type" value="car" />
+		<property name="loan" value="400000" />
+		<property name="emi" value="3258"/>
+		<property name="tenure" value="18"/>
+	</bean>
+		<bean id="loan2" class="com.cognizant.loan.model.Loan">
+		<property name="number" value="H00987987921657" />
+		<property name="type" value="education" />
+		<property name="loan" value="1800000" />
+		<property name="emi" value="12045"/>
+		<property name="tenure" value="60"/>
+	</bean>
+		<bean id="loan3" class="com.cognizant.loan.model.Loan">
+		<property name="number" value="H00987987972332" />
+		<property name="type" value="home" />
+		<property name="loan" value="320000000" />
+		<property name="emi" value="45000"/>
+		<property name="tenure" value="120"/>
+	</bean>
+		<bean id="loan4" class="com.cognizant.loan.model.Loan">
+		<property name="number" value="H00987987972452" />
+		<property name="type" value="business" />
+		<property name="loan" value="300000" />
+		<property name="emi" value="6520"/>
+		<property name="tenure" value="24"/>
+	</bean>
+		<bean id="loan5" class="com.cognizant.loan.model.Loan">
+		<property name="number" value="H00987987972325" />
+		<property name="type" value="car" />
+		<property name="loan" value="21456000" />
+		<property name="emi" value="2145"/>
+		<property name="tenure" value="120"/>
+	</bean>
+	<bean id="loanList" class="java.util.ArrayList">
+		<constructor-arg>
+			<list>
+				<ref bean="loan1"></ref>
+				<ref bean="loan2"></ref>
+				<ref bean="loan3"></ref>
+				<ref bean="loan4"></ref>
+				<ref bean="loan5"></ref>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>
